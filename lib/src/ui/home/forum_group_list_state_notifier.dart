@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:yafnc/src/data/entity/forum_group.dart';
 import 'package:yafnc/src/data/repository/forum_repository.dart';
@@ -18,8 +19,11 @@ class ForumGroupListStateNotifier extends _$ForumGroupListStateNotifier {
   }
 
   void load() {
+    debugPrint('load');
     _repository.getAllForumGroups().then((groups) {
       state = groups;
+    }).catchError((err) {
+      debugPrint(err);
     });
   }
 }

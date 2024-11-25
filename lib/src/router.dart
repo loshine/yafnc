@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:yafnc/src/ui/account/login_screen.dart';
 import 'package:yafnc/src/ui/message/message_screen.dart';
 import 'package:yafnc/src/ui/profile/profile_screen.dart';
 import 'package:yafnc/src/ui/settings/settings_screen.dart';
@@ -66,7 +67,7 @@ final appRouter = GoRouter(
             GoRoute(
               path: '/profile',
               pageBuilder: (context, state) => const NoTransitionPage(
-                child: ProfileScreen(),
+                child: LoginScreen(),
               ),
               routes: [],
             ),

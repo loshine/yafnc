@@ -10,6 +10,8 @@ class Logger {
 
   final _talker = Talker();
 
+  get talker => _talker;
+
   void log(
     dynamic message, {
     LogLevel logLevel = LogLevel.debug,

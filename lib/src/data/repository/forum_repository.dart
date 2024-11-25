@@ -19,9 +19,9 @@ class ForumRepositoryImpl implements ForumRepository {
   @override
   Future<List<ForumGroup>> getAllForumGroups() {
     String groups = _box.get('groups', defaultValue: '[]');
-    if (groups.isNotEmpty) {
+    if (groups.length > '[]'.length) {
       return Future.delayed(
-          const Duration(),
+          const Duration(milliseconds: 100),
           () => jsonDecode(groups)
               .map<ForumGroup>((e) => ForumGroup.fromJson(e))
               .toList());

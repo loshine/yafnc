@@ -7,7 +7,7 @@ part of 'forum_group_list_state_notifier.dart';
 // **************************************************************************
 
 String _$forumGroupListStateNotifierHash() =>
-    r'0ae1c6a5f1ecc148864a3ecb94633ba8d5e66091';
+    r'cbfc2b3579f473a945f69e27755a8cb6bfb67795';
 
 /// See also [ForumGroupListStateNotifier].
 @ProviderFor(ForumGroupListStateNotifier)
